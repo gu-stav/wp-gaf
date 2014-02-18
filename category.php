@@ -1,6 +1,4 @@
-<?php
-  get_header();
-?>
+<?php get_header(); ?>
 
 <section class="content">
   <?php
@@ -12,3 +10,5 @@
   <?php endwhile; endif; ?>
 
 </section>
+
+<?php get_footer(); ?>

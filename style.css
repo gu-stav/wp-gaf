@@ -177,6 +177,12 @@ h1 {
   margin-top: 0;
 }
 
+/* footer */
+footer .header__logo {
+  margin-left: 2em;
+  margin-bottom: 16em;
+}
+
 /* fluid for tablets and phones */
 @media only screen and ( max-width: 820px ) {
   .header__logo {

@@ -18,3 +18,5 @@
   <?php get_template_part( 'post' ); ?>
 
 </section>
+
+<?php get_footer(); ?>

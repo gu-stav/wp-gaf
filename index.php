@@ -8,3 +8,5 @@
     <?php get_template_part( 'post' ); ?>
   <?php endwhile; endif; ?>
 </section>
+
+<?php get_footer(); ?>
