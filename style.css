@@ -127,6 +127,10 @@ h1 {
   margin-bottom: 2px;
 }
 
+.post--page {
+  min-height: 100%;
+}
+
 .post--page .post__content {
   margin-top: 0;
 }

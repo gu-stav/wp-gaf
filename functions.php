@@ -1,5 +1,6 @@
 <?php
   add_theme_support( 'post-thumbnails' );
+  add_theme_support( 'page-thumbnails' );
   set_post_thumbnail_size( 1900, 1300 );
 
   add_action( 'init', 'register_my_menus' );
