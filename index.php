@@ -9,7 +9,7 @@
   <?php endwhile; endif; ?>
 
 <?php
-  query_posts( $query_string . '&category_name=past' );
+  query_posts( $query_string . '&category_name=upcoming' );
 ?>
 
 <?php
