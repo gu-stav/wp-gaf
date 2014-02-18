@@ -82,16 +82,25 @@ h1 {
   text-decoration: underline;
 }
 
-  /* current */
-  #menu-item-72 {
-    display: none;
-  }
-
 .menu-default-container > ul {
   list-style: none;
   padding: 0;
   margin: 0;
   font-size: 1.2em;
+}
+
+/* content wrapper */
+.content__category-divider {
+  background-color: #fff;
+  padding: 2em 0 2em 5.4em;
+  font-size: 3.2em;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.content__category-divider:before {
+  content: '_____________';
+  letter-spacing: -5;
 }
 
 /* posts */
@@ -231,10 +240,6 @@ footer .header__logo {
 
   .post__content {
     margin-top: -30%;
-  }
-
-  #menu-item-72 {
-    display: inline-block;
   }
 }
 
