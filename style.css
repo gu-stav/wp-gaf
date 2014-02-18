@@ -167,6 +167,12 @@ h1 {
   height: 100%;
 }
 
+.post__images {
+  background-color: #fff;
+  padding: 1em 0;
+  color: #333;
+}
+
 .post__content > p:first-child {
   margin-top: 0;
 }
