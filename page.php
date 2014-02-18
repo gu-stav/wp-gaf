@@ -11,14 +11,17 @@
 ?>
 
 <section class="content">
-  <article class="post post--page" style="background-image: url(<?php echo $background ?>)">
-    <div class="post__header">
-      <div>
-        <h1><?php echo $post->post_title; ?></h1>
+  <article class="post post--page">
+    <div class="post__image" style="background-image: url(<?php echo $background ?>)">
+      <div class="post__header">
+        <div>
+          <h1><?php echo $post->post_title; ?></h1>
+        </div>
       </div>
-    </div>
-    <div class="post__content">
+
+      <div class="post__content">
       <?php echo $post->post_content; ?>
+    </div>
     </div>
   </article>
 <section>
