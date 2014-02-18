@@ -41,11 +41,11 @@
         <?php } ?>
 
         <?php if( $opening ) { ?>
-          <strong>Opening <?php echo $opening ?></strong>
+          <strong>Eröffnung am <?php echo $opening ?></strong>
         <?php } ?>
 
         <?php if( $duration_start || $duration_end ) { ?>
-          <strong>Exhibition from <?php echo $duration_start ?> to <?php echo $duration_end ?></strong>
+          <strong>Ausstellung vom <?php echo $duration_start ?> - <?php echo $duration_end ?></strong>
         <?php } ?>
 
       </div>
