@@ -13,6 +13,10 @@
   <meta name="viewport" content="width=device-width" />
   <meta charset="utf-8" />
 
+  <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700"
+        rel="stylesheet"
+        type="text/css" />
+
   <link rel="stylesheet"
         href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 

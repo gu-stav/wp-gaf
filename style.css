@@ -1,29 +1,5 @@
 @import url('style/normalize.css');
 
-@font-face {
-    font-family: 'Oswald';
-    src: url('fonts/Oswald-Bold.woff') format('truetype'),
-         url('fonts/Oswald-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Oswald';
-    src: url('fonts/Oswald-Regular.woff') format('truetype'),
-         url('fonts/Oswald-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Oswald';
-    src: url('fonts/Oswald-Light.woff') format('truetype'),
-         url('fonts/Oswald-Light.woff') format('woff');
-    font-weight: light;
-    font-style: normal;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -33,7 +9,7 @@ html {
   color: #CEE7F8;
   line-height: 1.5;
   font-family: Oswald;
-  font-weight: lighter;
+  font-weight: 100;
 }
 
 body {
@@ -48,7 +24,7 @@ a {
 h1 {
   margin: 0;
   line-height: 1;
-  font-weight: lighter;
+  font-weight: 100;
   font-size: 2.3em;
 }
 
