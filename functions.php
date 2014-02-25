@@ -161,5 +161,26 @@ if(function_exists("register_field_group"))
   ));
 }
 
+function special_nav_class( $classes, $item ) {
+  if( is_home() && $item->post_name == "current" ) {
+    $classes[] = "current-menu-item";
+  }
+
+  if( is_home() && $item->title == "Upcoming" ) {
+    $classes = $item->classes;
+
+    foreach ( $classes as $key => $value ) {
+      if( $value == 'current_page_item' ||
+          $value == 'current-menu-item' ) {
+        $classes[ $key ] = '';
+      }
+    }
+
+    $item->classes = $classes;
+  }
+
+  return $classes;
+}
+
 
 ?>

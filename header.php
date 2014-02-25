@@ -38,4 +38,9 @@
   <?php } ?>
 </header>
 
-<?php wp_nav_menu(); ?>
+<?php
+  add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+  $nav = wp_nav_menu( array( 'echo' => 0 ) );
+
+  print_r( $nav )
+?>
