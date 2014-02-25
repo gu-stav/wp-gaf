@@ -43,6 +43,10 @@ h1 {
 
 .menu-default-container {
   margin: 2em 0 0 0;
+  position: fixed;
+  bottom: 4em;
+  right: 0;
+  width: 6em;
 }
 
 .menu-default-container a {
@@ -66,6 +70,10 @@ h1 {
 }
 
 /* content wrapper */
+.content {
+  margin-right: 7em;
+}
+
 .content__category-divider {
   background-color: #fff;
   padding: 2em 0 2em 5.4em;

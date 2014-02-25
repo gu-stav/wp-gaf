@@ -36,6 +36,6 @@
   <?php if( !is_home() ) { ?>
     </a>
   <?php } ?>
-
-  <?php wp_nav_menu(); ?>
 </header>
+
+<?php wp_nav_menu(); ?>
