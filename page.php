@@ -38,7 +38,7 @@
 <section>
 
 <?php if( $background && (
-          the_field( 'excerpt', $post->ID ) ||
+          get_post_meta( $post->ID, 'excerpt', true ) ||
           $post->post_content ) ) {
         get_footer();
       }
