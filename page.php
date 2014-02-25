@@ -22,7 +22,7 @@
 
     <? if( get_post_meta( $post->ID, 'excerpt', true ) ) { ?>
       <div class="post__content">
-        <? echo get_post_meta( $post->ID, 'excerpt', true ); ?>
+        <? echo the_field( 'excerpt', $post->ID ); ?>
       </div>
     <? } ?>
 
@@ -38,7 +38,7 @@
 <section>
 
 <?php if( $background && (
-          get_post_meta( $post->ID, 'excerpt', true ) ||
+          the_field( 'excerpt', $post->ID ) ||
           $post->post_content ) ) {
         get_footer();
       }

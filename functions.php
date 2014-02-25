@@ -136,7 +136,7 @@ if(function_exists("register_field_group"))
         'name' => 'excerpt',
         'type' => 'wysiwyg',
         'default_value' => '',
-        'toolbar' => 'full',
+        'toolbar' => 'basic',
         'media_upload' => 'no',
       ),
     ),
