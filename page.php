@@ -20,15 +20,20 @@
       </div>
     </div>
 
-    <div class="post__content">
-      <? echo get_post_meta( $post->ID, 'excerpt', true ); ?>
-    </div>
-
-    <div class="post__images">
-      <div class="post__images--page">
-        <?php echo $post->post_content; ?>
+    <? if( get_post_meta( $post->ID, 'excerpt', true ) ) { ?>
+      <div class="post__content">
+        <? echo get_post_meta( $post->ID, 'excerpt', true ); ?>
       </div>
-    </div>
+    <? } ?>
+
+    <? if( $post->post_content ) { ?>
+      <div class="post__images">
+        <div class="post__images--page">
+          <?php echo $post->post_content; ?>
+        </div>
+      </div>
+    <? } ?>
+
   </article>
 <section>
 
