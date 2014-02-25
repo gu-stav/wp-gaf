@@ -124,4 +124,42 @@
   ));
 }
 
+if(function_exists("register_field_group"))
+{
+  register_field_group(array (
+    'id' => 'acf_post-fields',
+    'title' => 'Post fields',
+    'fields' => array (
+      array (
+        'key' => 'field_530d06e5514fd',
+        'label' => 'Excerpt',
+        'name' => 'excerpt',
+        'type' => 'wysiwyg',
+        'default_value' => '',
+        'toolbar' => 'full',
+        'media_upload' => 'no',
+      ),
+    ),
+    'location' => array (
+      array (
+        array (
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'page',
+          'order_no' => 0,
+          'group_no' => 0,
+        ),
+      ),
+    ),
+    'options' => array (
+      'position' => 'acf_after_title',
+      'layout' => 'no_box',
+      'hide_on_screen' => array (
+      ),
+    ),
+    'menu_order' => 0,
+  ));
+}
+
+
 ?>

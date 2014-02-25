@@ -103,10 +103,6 @@ h1 {
   margin-bottom: 2px;
 }
 
-.post--page .post__content {
-  margin-top: 0;
-}
-
 .post__header a {
   text-decoration: none;
 }
@@ -155,6 +151,15 @@ h1 {
 .post__images {
   background-color: #fff;
   padding: 1em 0;
+  color: #333;
+}
+
+.post__images--page {
+  margin-left: 17.5em;
+  width: 35em;
+}
+
+.post__images a {
   color: #333;
 }
 

@@ -18,10 +18,18 @@
           <h1><?php echo $post->post_title; ?></h1>
         </div>
       </div>
-
-      <div class="post__content">
-      <?php echo $post->post_content; ?>
     </div>
+
+    <div class="post__content">
+      <? echo get_post_meta( $post->ID, 'excerpt', true ); ?>
+    </div>
+
+    <div class="post__images">
+      <div class="post__images--page">
+        <?php echo $post->post_content; ?>
+      </div>
     </div>
   </article>
 <section>
+
+<?php get_footer(); ?>
