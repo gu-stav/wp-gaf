@@ -55,9 +55,7 @@
     <?php echo $post->post_content; ?>
   </div>
 
-  <?php if( $images ) { ?>
-    <div class="post__images">
-      <?php the_field( 'images', $post->ID ) ?>
-    </div>
-  <?php } ?>
+  <div class="post__images">
+    <?php the_field( 'images', $post->ID ) ?>
+  </div>
 </article>
