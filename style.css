@@ -123,13 +123,13 @@ h1 {
 
 .post__header h1:before {
   content: '»';
-  left: -.75em;
+  left: -.6em;
 }
 
 .post__header h1:after {
   content: '«';
   display: inline-block;
-  padding-left: .2em;
+  padding-left: .15em;
 }
 
 .post__header div > strong {
