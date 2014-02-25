@@ -21,6 +21,14 @@ a {
   color: #CEE7F8;
 }
 
+address {
+  font-style: normal;
+}
+
+address > span {
+  display: block;
+}
+
 h1 {
   margin: 0;
   line-height: 1;
