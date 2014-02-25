@@ -6,13 +6,13 @@
   if( $background[0] ) {
     $background = $background[0];
   } else {
-    $background = '';
+    $background = false;
   }
 ?>
 
 <section class="content">
   <article class="post post--page">
-    <div class="post__image" style="background-image: url(<?php echo $background ?>)">
+    <div class="post__image <? if( !$background ) { ?> post__image--empty <? } ?>" style="background-image: url(<?php echo $background ?>)">
       <div class="post__header">
         <div>
           <h1><?php echo $post->post_title; ?></h1>
@@ -37,4 +37,9 @@
   </article>
 <section>
 
-<?php get_footer(); ?>
+<?php if( $background && (
+          get_post_meta( $post->ID, 'excerpt', true ) ||
+          $post->post_content ) ) {
+        get_footer();
+      }
+?>
