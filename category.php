@@ -11,4 +11,4 @@
 
 </section>
 
-<?php get_footer(); ?>
+<?php if ( have_posts() ) { get_footer(); } ?>
