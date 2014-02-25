@@ -33,7 +33,6 @@
           $subtitle = get_post_meta( $post->ID, 'subtitle', true );
           $duration_start = get_post_meta( $post->ID, 'duration_start', true );
           $duration_end = get_post_meta( $post->ID, 'duration_end', true );
-          $images = the_field( 'images', $post->ID );
         ?>
 
         <?php if( $subtitle ) { ?>
@@ -58,7 +57,7 @@
 
   <?php if( $images ) { ?>
     <div class="post__images">
-      <?php echo $images ?>
+      <?php the_field( 'images', $post->ID ) ?>
     </div>
   <?php } ?>
 </article>
