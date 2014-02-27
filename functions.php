@@ -6,6 +6,14 @@
   add_action( 'init', 'register_my_menus' );
   add_action('admin_init', 'wpb_imagelink_setup', 10);
 
+  add_filter( 'post_thumbnail_html', 'remove_height_attribute', 10 );
+  add_filter( 'image_send_to_editor', 'remove_height_attribute', 10 );
+
+function remove_height_attribute( $html ) {
+   $html = preg_replace( '/(height)="\d*"\s/', "", $html );
+   return $html;
+}
+
   function wpb_imagelink_setup() {
     $image_set = get_option( 'image_default_link_type' );
 
