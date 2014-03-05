@@ -2,12 +2,13 @@ $(function() {
   $('#menu-default')
     .find('a')
     .on('click', function( e ) {
-      var $target = $(e.target);
+      var $target = $(e.target),
+          toggleClass = 'current_page_item current-menu-item';
 
-      $target.parent().addClass('current-menu-item');
+      $target.parent().addClass( toggleClass );
       $target
         .parent()
         .siblings()
-        .removeClass('current-menu-item')
+        .removeClass( toggleClass );
     })
 });
