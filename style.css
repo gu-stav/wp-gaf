@@ -203,7 +203,7 @@ img[class*="wp-image-"] {
 .post__images--page {
   margin-left: 14em;
   width: 487px;
-  padding: .8em;
+  padding: .8em 0;
 }
 
 .post__images a {
