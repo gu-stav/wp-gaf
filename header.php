@@ -29,18 +29,7 @@
     <a href="<?php echo home_url(); ?>">
   <?php } ?>
 
-  <? $logo_appendix = '';
-
-     if( is_page() ) {
-       if( is_single() ) {
-        if( get_post_meta( $page->ID, 'show_dark_logo', true ) ) {
-          $logo_appendix = '-dark';
-        }
-       }
-     }
-   ?>
-
-    <img src="<?php echo get_bloginfo('template_url'); ?>/style/logo<? echo $logo_appendix; ?>.svg"
+    <img src="<?php echo get_bloginfo('template_url'); ?>/style/logo.svg"
          class="header__logo"
          alt="GAF Hannover - Logo" />
 

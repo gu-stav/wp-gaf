@@ -59,6 +59,18 @@ function remove_height_attribute( $html ) {
         'first_day' => 1,
       ),
       array (
+        'key' => 'field_531775450d357',
+        'label' => 'Opening time',
+        'name' => 'opening_time',
+        'type' => 'text',
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'html',
+        'maxlength' => '',
+      ),
+      array (
         'key' => 'field_5300ab10afff7',
         'label' => 'Start',
         'name' => 'duration_start',
@@ -78,16 +90,25 @@ function remove_height_attribute( $html ) {
       ),
     ),
     'location' => array (
-      array (
-        array (
-          'param' => 'post_type',
-          'operator' => '==',
-          'value' => 'post',
-          'order_no' => 0,
-          'group_no' => 0,
-        ),
-      ),
-    ),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+			array (
+				array (
+					'param' => 'page_type',
+					'operator' => '==',
+					'value' => 'posts_page',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
+		),
     'options' => array (
       'position' => 'acf_after_title',
       'layout' => 'no_box',
@@ -168,6 +189,7 @@ if(function_exists("register_field_group"))
     'menu_order' => 0,
   ));
 }
+
 
 function special_nav_class( $classes, $item ) {
   if( is_home() && $item->post_name == "current" ) {

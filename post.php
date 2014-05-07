@@ -30,6 +30,7 @@
 
         <?php
           $opening = get_post_meta( $post->ID, 'opening', true );
+          $opening_time = get_post_meta( $post->ID, 'opening_time', true );
           $subtitle = get_post_meta( $post->ID, 'subtitle', true );
           $duration_start = get_post_meta( $post->ID, 'duration_start', true );
           $duration_end = get_post_meta( $post->ID, 'duration_end', true );
@@ -39,8 +40,30 @@
           <strong><?php echo $subtitle ?></strong>
         <?php } ?>
 
-        <?php if( $opening ) { ?>
-          <strong>Eröffnung am <?php echo $opening ?></strong>
+        <?php if( $opening || $opening_time ) { ?>
+          <strong>
+
+          <?php
+            if( $opening ) {
+          ?>
+
+            Eröffnung am <?php echo $opening ?>
+
+          <?php
+            }
+          ?>
+
+          <?php
+            if( $opening_time ) {
+          ?>
+
+            um <?php echo $opening_time ?> Uhr
+
+          <?php
+            }
+          ?>
+
+          </strong>
         <?php } ?>
 
         <?php if( $duration_start || $duration_end ) { ?>
