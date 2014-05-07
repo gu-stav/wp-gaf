@@ -75,7 +75,7 @@
   </div>
 
   <div class="post__content">
-    <?php echo $post->post_content; ?>
+    <?php echo apply_filters('the_content', $post->post_content); ?>
   </div>
 
   <div class="post__images">

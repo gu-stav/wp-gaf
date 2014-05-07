@@ -35,7 +35,7 @@
     <? if( $post->post_content ) { ?>
       <div class="post__images">
         <div class="post__images--page">
-          <?php echo $post->post_content; ?>
+          <?php echo apply_filters('the_content', $post->post_content); ?>
         </div>
       </div>
     <? } ?>
