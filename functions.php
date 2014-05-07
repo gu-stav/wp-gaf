@@ -190,6 +190,57 @@ if(function_exists("register_field_group"))
   ));
 }
 
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_test',
+		'title' => 'test',
+		'fields' => array (
+			array (
+				'key' => 'field_5345693f6d6c0',
+				'label' => 'Show logo in',
+				'name' => 'show_logo_color',
+				'type' => 'radio',
+				'choices' => array (
+					'Dark' => 'Dark',
+					'Bright' => 'Bright',
+				),
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => 'Bright',
+				'layout' => 'horizontal',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+      array (
+        array (
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'page',
+          'order_no' => 0,
+          'group_no' => 0,
+        ),
+      ),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
 
 function special_nav_class( $classes, $item ) {
   if( is_home() && $item->post_name == "current" ) {
@@ -212,5 +263,7 @@ function special_nav_class( $classes, $item ) {
   return $classes;
 }
 
+
+$HEADER_DARK = false;
 
 ?>

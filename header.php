@@ -25,11 +25,18 @@
 <body>
 
 <header class="header">
-  <?php if( !is_home() ) { ?>
+  <?php global $HEADER_DARK;
+    $logo_appendix = '';
+
+    if( $HEADER_DARK ) {
+      $logo_appendix = '--dark';
+    }
+
+    if( !is_home() ) { ?>
     <a href="<?php echo home_url(); ?>">
   <?php } ?>
 
-    <img src="<?php echo get_bloginfo('template_url'); ?>/style/logo.svg"
+    <img src="<?php echo get_bloginfo('template_url'); ?>/style/logo<?php echo $logo_appendix ?>.svg"
          class="header__logo"
          alt="GAF Hannover - Logo" />
 

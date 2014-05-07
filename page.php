@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+  if( get_post_meta( $post->ID, 'show_logo_color', true ) === 'Dark' ) {
+    $HEADER_DARK = true;
+  }
+
+  get_header();
+?>
 
 <?php
   $background = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
