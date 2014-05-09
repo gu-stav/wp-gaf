@@ -1,7 +1,7 @@
 <?php
   $post_counter = 0;
   
-  query_posts('posts_per_page=-1');
+  query_posts( $query_string .'&posts_per_page=-1');
   if ( have_posts() ) : while ( have_posts() && $post_counter == 0 ) : the_post();
 
 ?>
