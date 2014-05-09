@@ -1,26 +1,19 @@
 <?php
   $post_counter = 0;
-  
-  query_posts( $query_string .'&posts_per_page=-1');
-  if ( have_posts() ) : while ( have_posts() && $post_counter == 0 ) : the_post();
 
-?>
+  foreach( get_posts( $query_string ) as $post ) {
+    if ( $post_counter == 0 ) {
+      if( get_post_meta( $post->ID, 'show_logo_color', true ) == 'Dark' ) {
+        $HEADER_DARK = true;
+      }
+    }
 
-<?php
-
-  if( get_post_meta( $post->ID, 'show_logo_color', true ) == 'Dark' ) {
-    $HEADER_DARK = true;
+    $post_counter += 1;
   }
-
-  $post_counter += 1;
-
 ?>
-<?php endwhile; endif; ?>
 
 <?php
-
-get_header();
-
+  get_header();
 ?>
 
 <section class="content">
