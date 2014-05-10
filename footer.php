@@ -4,17 +4,7 @@
            alt="GAF Hannover - Logo" />
 
       <div class="footer__col">
-        <h3>Öffnungszeiten</h3>
-        <p>Die Galerie ist mittwochs bis sonntags von 12 bis 18 Uhr geöffnet, dienstags von 12 bis 20 Uhr. 
-        Der Eintritt ist frei.</p>
-
-        <h3>Anschrift</h3>
-
-        <p>
-        Galerie für Fotografie in Hannover (GAF)<br/>
-        Seilerstraße 15d<br/>
-        30171 Hannover
-        </p>
+        <?php footer_text(); ?>
       </div>
 
     </footer>
