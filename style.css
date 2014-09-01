@@ -228,6 +228,21 @@ footer .footer__col {
   max-width: 15em;
 }
 
+/* service bar */
+.service,
+.service--dark {
+  margin: 0;
+  padding: .4em 1.5em .4em 17.7em;
+  background-color: rgb( 141, 193, 230 );
+  color: rgb( 19, 19, 19 );
+  margin-bottom: 1px;
+}
+
+.service--dark {
+  background-color: rgb( 25, 61, 121 );
+  color: rgb( 255, 255, 255 );
+}
+
 /* fluid for tablets and phones */
 @media only screen and ( max-width: 865px ) {
   .header__logo {
@@ -239,6 +254,11 @@ footer .footer__col {
   .post__images--page {
     margin-left: 180px;
     width: 450px;
+  }
+
+  .service,
+  .service--dark {
+    padding-left: 13.5em;
   }
 }
 
@@ -274,6 +294,12 @@ footer .footer__col {
 
   .post__content {
     margin-top: -30%;
+  }
+
+  .service,
+  .service--dark {
+    padding-left: 1.5em;
+    text-align: center;
   }
 }
 

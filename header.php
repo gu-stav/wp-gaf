@@ -24,14 +24,34 @@
 </head>
 <body>
 
+<?php
+
+global $HEADER_DARK;
+
+$logo_appendix = '';
+
+if( $HEADER_DARK ) {
+  $logo_appendix = '--dark';
+}
+
+?>
+
+<?php
+  $headerText = get_option( 'theme_header_text' );
+
+  if( $headerText ) {
+    ?>
+
+    <p class="service<?php echo $logo_appendix; ?>">
+      <?php echo $headerText; ?>
+    </p>
+
+    <?php
+  }
+?>
+
 <header class="header">
-  <?php global $HEADER_DARK;
-    $logo_appendix = '';
-
-    if( $HEADER_DARK ) {
-      $logo_appendix = '--dark';
-    }
-
+  <?php
     if( !is_home() ) { ?>
     <a href="<?php echo home_url(); ?>">
   <?php } ?>

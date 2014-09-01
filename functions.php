@@ -4,15 +4,39 @@
   set_post_thumbnail_size( 1900, 1300 );
 
   add_action( 'init', 'register_my_menus' );
-  add_action('admin_init', 'wpb_imagelink_setup', 10);
+  add_action( 'admin_init', 'wpb_imagelink_setup', 10 );
+  add_action( 'admin_menu', 'setup_theme_admin_menus' );
 
   add_filter( 'post_thumbnail_html', 'remove_height_attribute', 10 );
   add_filter( 'image_send_to_editor', 'remove_height_attribute', 10 );
 
-function remove_height_attribute( $html ) {
-   $html = preg_replace( '/(height)="\d*"\s/', "", $html );
-   return $html;
-}
+  function setup_theme_admin_menus() {
+    add_submenu_page('themes.php',
+        'Front Page Elements', 'Header Text', 'manage_options',
+        'front-page-elements', 'theme_header_text_settings');
+  }
+
+  function theme_header_text_settings() {
+    if ( isset( $_POST['header_text'] ) )
+      update_option( 'theme_header_text', stripslashes( $_POST['header_text'] ) );
+
+    echo '<div class="wrap">';
+
+    screen_icon();
+    printf ( '<h2>%s</h2>', __( 'Header Text', 'header-text' ) );
+
+    echo '<form method="post" action="" style="margin: 20px 0;">';
+
+    wp_editor( get_option( 'theme_header_text', '' ), 'header_text' );
+    submit_button();
+
+    echo '</form></div>';
+  }
+
+  function remove_height_attribute( $html ) {
+     $html = preg_replace( '/(height)="\d*"\s/', "", $html );
+     return $html;
+  }
 
   function wpb_imagelink_setup() {
     $image_set = get_option( 'image_default_link_type' );
