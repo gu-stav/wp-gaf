@@ -288,10 +288,17 @@ function special_nav_class( $classes, $item ) {
 }
 
 function get_all_posts( $query ) {
-    if( is_category() ) {
-      $query->set( 'posts_per_page', '-1' );
+    if(is_category()) {
+      $per_page = '-1';
+
+      if($query->query['category_name'] == 'past') {
+        $per_page = 5;
+      }
+
+      $query->set('posts_per_page', $per_page);
     }
 }
+
 add_action( 'pre_get_posts', 'get_all_posts' );
 
 $HEADER_DARK = false;

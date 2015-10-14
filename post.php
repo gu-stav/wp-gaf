@@ -1,7 +1,10 @@
 <?php
-  $background = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+  $background_id = get_post_thumbnail_id($post->ID);
+  $attachment = get_post($attachment_id);
+  $background = wp_get_attachment_image_src($background_id, 'full');
+  $background_caption = $attachment->post_excerpt;
 
-  if( $background[0] ) {
+  if($background[0]) {
     $background = $background[0];
   } else {
     $background = '';
@@ -9,7 +12,24 @@
 ?>
 
 <article class="post post--current">
-  <div class="post__image" style="background-image: url(<?php echo $background ?>)">
+  <div class="post__image"
+       style="background-image: url(<?php echo $background ?>)">
+
+    <?php
+      if($background) {
+    ?>
+
+    <a href="<?php echo esc_url( get_permalink() ); ?>"
+       rel="nofollow">
+      <img src="<?php echo $background ?>"
+           class="post__mobile-image"
+           alt="<?php echo $background_caption; ?>" />
+    </a>
+
+    <?php
+      }
+    ?>
+
     <div class="post__header">
       <div>
         <h2 class="pre-headline">
@@ -29,15 +49,15 @@
         ?>
 
         <?php
-          $opening = get_post_meta( $post->ID, 'opening', true );
-          $opening_time = get_post_meta( $post->ID, 'opening_time', true );
-          $subtitle = get_post_meta( $post->ID, 'subtitle', true );
-          $duration_start = get_post_meta( $post->ID, 'duration_start', true );
-          $duration_end = get_post_meta( $post->ID, 'duration_end', true );
+          $opening = get_post_meta($post->ID, 'opening', true);
+          $opening_time = get_post_meta($post->ID, 'opening_time', true);
+          $subtitle = get_post_meta($post->ID, 'subtitle', true);
+          $duration_start = get_post_meta($post->ID, 'duration_start', true);
+          $duration_end = get_post_meta($post->ID, 'duration_end', true);
         ?>
 
         <?php if( $subtitle ) { ?>
-          <strong><?php echo $subtitle ?></strong>
+          <strong class="post__subtitle"><?php echo $subtitle ?></strong>
         <?php } ?>
 
         <?php if( $opening || $opening_time ) { ?>

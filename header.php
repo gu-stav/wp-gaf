@@ -65,9 +65,16 @@ if( $HEADER_DARK ) {
   <?php } ?>
 </header>
 
+<div class="mobile-nav-toggle-container">
+  <button class="mobile-nav-toggle">
+    <img src="<?php echo get_bloginfo('template_url'); ?>/style/bars.svg"
+         class="mobile-nav-toggle__image"
+         alt="" />
+    Menu
+  </div>
+</div>
+
 <?php
   add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
-  $nav = wp_nav_menu( array( 'echo' => 0 ) );
-
-  print_r( $nav )
+  echo wp_nav_menu( array( 'echo' => 0 ) );
 ?>

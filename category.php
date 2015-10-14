@@ -25,6 +25,8 @@
 
   <?php endwhile; endif; ?>
 
+  <?php echo paginate_links(); ?>
+
 </section>
 
 <?php if ( have_posts() ) { get_footer(); } ?>
