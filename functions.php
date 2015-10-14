@@ -292,7 +292,7 @@ function get_all_posts( $query ) {
       $per_page = '-1';
 
       if($query->query['category_name'] == 'past') {
-        $per_page = 5;
+        $per_page = 3;
       }
 
       $query->set('posts_per_page', $per_page);
