@@ -1,0 +1,13 @@
+{
+  "name": "GAF",
+  "version": "1.0.1",
+  "homepage": "gafeisfabrik.de",
+  "authors": [
+    "Gustav Pursche <pursche@posteo.de>"
+  ],
+  "main": "js/main.js",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

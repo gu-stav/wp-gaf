@@ -1,0 +1,23 @@
+{
+  "name": "gaf",
+  "version": "1.0.1",
+  "description": "Wordpress theme for the GAF-Eisfabrik in Hannover",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavpursche/wp-gaf.git"
+  },
+  "author": "Gustav Pursche <pursche@posteo.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gustavpursche/wp-gaf/issues"
+  },
+  "homepage": "https://github.com/gustavpursche/wp-gaf#readme",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.4.2"
+  }
+}
