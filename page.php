@@ -18,7 +18,7 @@
 
 <section class="content">
   <article class="post post--page">
-    <div class="post__image <? if( !$background ) { ?> post__image--empty <? } ?>" style="background-image: url(<?php echo $background ?>)">
+    <div class="post__image <?php if( !$background ) { ?> post__image--empty <?php } ?>" style="background-image: url(<?php echo $background ?>)">
       <div class="post__header">
         <div>
           <h1><?php echo $post->post_title; ?></h1>
@@ -26,19 +26,19 @@
       </div>
     </div>
 
-    <? if( get_post_meta( $post->ID, 'excerpt', true ) ) { ?>
+    <?php if( get_post_meta( $post->ID, 'excerpt', true ) ) { ?>
       <div class="post__content">
-        <? echo the_field( 'excerpt', $post->ID ); ?>
+        <?php echo the_field( 'excerpt', $post->ID ); ?>
       </div>
-    <? } ?>
+    <?php } ?>
 
-    <? if( $post->post_content ) { ?>
+    <?php if( $post->post_content ) { ?>
       <div class="post__images">
         <div class="post__images--page">
           <?php echo apply_filters('the_content', $post->post_content); ?>
         </div>
       </div>
-    <? } ?>
+    <?php } ?>
 
   </article>
 <section>
