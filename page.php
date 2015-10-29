@@ -7,18 +7,34 @@
 ?>
 
 <?php
-  $background = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+  $background_id = get_post_thumbnail_id($post->ID);
+  $attachment = get_post($attachment_id);
+  $background = wp_get_attachment_image_src($background_id, 'full');
+  $background_caption = $attachment->post_excerpt;
 
-  if( $background[0] ) {
+  if($background[0]) {
     $background = $background[0];
   } else {
-    $background = false;
+    $background = '';
   }
 ?>
 
 <section class="content">
   <article class="post post--page">
     <div class="post__image <?php if( !$background ) { ?> post__image--empty <?php } ?>" style="background-image: url(<?php echo $background ?>)">
+
+      <?php
+        if($background) {
+      ?>
+
+      <img src="<?php echo $background ?>"
+           class="post__mobile-image"
+           alt="<?php echo $background_caption; ?>" />
+
+      <?php
+        }
+      ?>
+
       <div class="post__header">
         <div>
           <h1><?php echo $post->post_title; ?></h1>

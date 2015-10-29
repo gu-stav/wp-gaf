@@ -207,6 +207,12 @@ h6 {
   font-weight: 400;
 }
 
+.post__content img {
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+
 .post__image {
   background-repeat: no-repeat;
   background-size: cover;
@@ -228,25 +234,23 @@ h6 {
 
 .post__images {
   background-color: #fff;
-  padding: 0;
   color: #333;
   font-size: 1.25em;
+  padding: .8em;
 }
 
-img.size-full,
-img.size-large {
-  max-width: 100%;
-  width: auto;
-}
-
-img[class*="align"],
-img[class*="wp-image-"] {
-    height: auto;
+.post__images h1,
+.post__images h2,
+.post__images h3,
+.post__images h4,
+.post__images h5,
+.post__images h6 {
+  margin: 0 0 .3em 0;
 }
 
 .post__images--page {
-  margin-left: 13.3em;
-  width: 487px;
+  margin-left: 12.5em;
+  width: 480px;
   padding: .8em 0;
 }
 
@@ -332,7 +336,7 @@ footer .footer__col {
   .post__content,
   .post__images--page {
     margin-left: 180px;
-    width: 450px;
+    width: 430px;
   }
 
   .service,
@@ -422,6 +426,19 @@ footer .footer__col {
     width: 98%;
   }
 
+  .post__image--empty .post__header {
+    left: auto;
+    max-width: 100%;
+    position: relative;
+    top: 0;
+    transform: none;
+    width: 100%;
+  }
+
+  .post__image--empty .post__header > div {
+    background: transparent;
+  }
+
   .post__header h1 {
     font-size: 1.8em;
   }
@@ -477,6 +494,13 @@ footer .footer__col {
     position: relative;
     top: auto;
     transform: none;
+  }
+
+  .post__image--empty .post__header {
+    background-color: transparent;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0;
   }
 
   .post__header h1 {

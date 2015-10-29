@@ -12,8 +12,7 @@
 ?>
 
 <article class="post post--current">
-  <div class="post__image"
-       style="background-image: url(<?php echo $background ?>)">
+  <div class="post__image <?php if( !$background ) { ?> post__image--empty <?php } ?>" style="background-image: url(<?php echo $background ?>)">
 
     <?php
       if($background) {
