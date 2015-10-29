@@ -97,7 +97,15 @@
     <?php echo apply_filters('the_content', $post->post_content); ?>
   </div>
 
-  <div class="post__images">
-    <?php the_field( 'images', $post->ID ) ?>
-  </div>
+  <?php
+    $post_images = get_field('images', $post->ID);
+  ?>
+
+  <?php if($post_images) { ?>
+
+    <div class="post__images">
+      <?php echo $post_images; ?>
+    </div>
+
+  <?php } ?>
 </article>

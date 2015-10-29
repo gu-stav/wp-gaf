@@ -25,14 +25,22 @@
 
   <?php endwhile; endif; ?>
 
-  <div class="pagination">
-    <?php
-      echo paginate_links(array(
-        'prev_text' => __('« Aktueller'),
-        'next_text' => __('Älter »'),
-      ));
-    ?>
-  </div>
+  <?php
+    $pagination = paginate_links(array(
+      'prev_text' => __('« Aktueller'),
+      'next_text' => __('Älter »'),
+    ));
+  ?>
+
+  <?php if($pagination) { ?>
+
+    <div class="pagination">
+      <?php
+        echo $pagination;
+      ?>
+    </div>
+
+  <?php } ?>
 
 </section>
 

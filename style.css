@@ -213,6 +213,10 @@ h6 {
   width: auto;
 }
 
+.post__content iframe {
+  max-width: 100%;
+}
+
 .post__image {
   background-repeat: no-repeat;
   background-size: cover;
@@ -259,7 +263,12 @@ h6 {
 }
 
 .post__images img {
+  height: auto;
   max-width: 100%;
+}
+
+.post__images img + img {
+  margin-top: 1em;
 }
 
 .post__images > p:last-child {
